@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "exo3bis_json.py", line 21, in <module>
+    resp.html.render()
+  File "/home/srp/.local/lib/python3.8/site-packages/requests_html.py", line 586, in render
+    self.browser = self.session.browser  # Automatically create a event loop and browser
+  File "/home/srp/.local/lib/python3.8/site-packages/requests_html.py", line 730, in browser
+    self._browser = self.loop.run_until_complete(super().browser)
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/home/srp/.local/lib/python3.8/site-packages/requests_html.py", line 714, in browser
+    self._browser = await pyppeteer.launch(ignoreHTTPSErrors=not(self.verify), headless=True, args=self.__browser_args)
+  File "/home/srp/.local/lib/python3.8/site-packages/pyppeteer/launcher.py", line 305, in launch
+    return await Launcher(options, **kwargs).launch()
+  File "/home/srp/.local/lib/python3.8/site-packages/pyppeteer/launcher.py", line 166, in launch
+    self.browserWSEndpoint = get_ws_endpoint(self.url)
+  File "/home/srp/.local/lib/python3.8/site-packages/pyppeteer/launcher.py", line 225, in get_ws_endpoint
+    raise BrowserError('Browser closed unexpectedly:\n')
+pyppeteer.errors.BrowserError: Browser closed unexpectedly:
+
